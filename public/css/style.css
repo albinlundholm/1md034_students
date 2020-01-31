@@ -3,6 +3,7 @@
 body {
     font-family: "PT Sans, sans-serif";
     font-size: 15pt;
+    margin: 0 auto;
 }
 
 .allergen {
@@ -21,4 +22,9 @@ body {
 button:hover {
     background-color: blue;
     cursor: pointer;
+}
+
+table {
+    width: 75%;
+    margin: 0 auto;
 }
