@@ -8,3 +8,12 @@ body {
 .allergen {
     font-weight: bold;
 }
+
+#selection {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+#customerinfo {
+
+}
