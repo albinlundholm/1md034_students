@@ -24,7 +24,15 @@ button:hover {
     cursor: pointer;
 }
 
+button {
+    margin: 100px;
+}
+
 table {
     width: 75%;
     margin: 0 auto;
+}
+
+section {
+    margin: 50px 100px;
 }
