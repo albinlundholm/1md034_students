@@ -22,13 +22,17 @@ body {
     padding: 5px;
 }
 
+#head > img{
+    opacity: 0.5;
+}
+
 button:hover {
     background-color: blue;
     cursor: pointer;
 }
 
 button {
-    margin: 100px;
+    margin: 50px 100px;
 }
 
 table {
