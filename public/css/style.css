@@ -17,3 +17,8 @@ body {
 #customerinfo {
 
 }
+
+button:hover {
+    background-color: blue;
+    cursor: pointer;
+}
