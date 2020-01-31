@@ -4,3 +4,7 @@ body {
     font-family: "PT Sans, sans-serif";
     font-size: 15pt;
 }
+
+.allergen {
+    font-weight: bold;
+}
