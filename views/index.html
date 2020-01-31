@@ -72,13 +72,23 @@
 	  </p>
 
 	  <p>
-	    <label for="paymentmethod">Paymen method</label><br>
+	    <label for="paymentmethod">Payment method</label><br>
 	    <select id="paymentmethod" name="pm">
 	      <option>Credit/debit card</option>
 	      <option>Bank transfer</option>
 	      <option>Swish</option>
 	      <option>Snail mail</option>
 	    </select>
+	  </p>
+	  
+	  <p>
+	    <label>Gender</label><br>
+	    <label for="male">Male</label>
+	    <input type="radio" id="male" name="gender" value="male" required="required" checked/>
+	    <label for="female">Female</label>
+	    <input type="radio" id="female" name="gender" value="female" required="required"/>
+	    <label for="other">Other</label>
+	    <input type="radio" id="other" name="gender" value="other" required="required"/>
 	  </p>
 	  
 	</section>
