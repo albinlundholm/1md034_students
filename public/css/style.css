@@ -22,8 +22,20 @@ body {
     padding: 5px;
 }
 
+#head {
+    height: 300px;
+    overflow: hidden;
+}
+
 #head > img{
-    opacity: 0.5;
+    opacity: 0.75;
+    width: 100%;
+    height: auto;
+}
+
+#head > h1{
+    position: absolute;
+    padding: 50px;
 }
 
 button:hover {
