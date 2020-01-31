@@ -10,6 +10,13 @@ body {
     font-weight: bold;
 }
 
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    
+}
+
 #selection {
     color: #ffffff;
     background-color: #000000;
@@ -45,11 +52,6 @@ button:hover {
 
 button {
     margin: 50px 100px;
-}
-
-table {
-    width: 75%;
-    margin: 0 auto;
 }
 
 section {
