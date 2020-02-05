@@ -10,10 +10,11 @@
     </ul>
 </div>
 */
-
+/*
 const vm = new Vue({
     el: '#burgerList',
     data: {
   	burgerMenu: menu
     }
 })
+*/

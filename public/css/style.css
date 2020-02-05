@@ -17,6 +17,10 @@ body {
     
 }
 
+.burgerImage {
+    width: 200px;
+}
+
 #selection {
     color: #ffffff;
     background-color: #000000;
