@@ -1,10 +1,19 @@
+/*
+<div id="myID">
+    <h1>Välj en burgare</h1>
+    <ul id="burgerList">
+    <li v-for="burger in burgerMenu">
+      {{ burger.name }} Calories: {{burger.kcal}}
+      <span v-if="burger.gluten == true" >Contains gluten</span>
+      <span v-if="burger.lactose == true" >Contains lactose</span>
+    </li>
+    </ul>
+</div>
+*/
+
 const vm = new Vue({
-    el: '#myID',
+    el: '#burgerList',
     data: {
-	b1: printItem(item1),
-	b2: printItem(item2),
-	b3: printItem(item3),
-	b4: printItem(item4),
-	b5: printItem(item5)
+  	burgerMenu: menu
     }
 })
