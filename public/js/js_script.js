@@ -7,6 +7,7 @@ function menuItem(name, kcal, gluten, lactose, ingredient, imgPath) {
     this.imgPath = imgPath;
 }
 
+
 function printItem(item) {
     return [item.name, item.kcal];
 }
@@ -19,10 +20,26 @@ let item3 = new menuItem("third burger", 500, false, false, "Pickeled onions", "
 
 let item4 = new menuItem("fourth burger", 5000, true, true, "Everything", "https://media-cdn.tripadvisor.com/media/photo-s/18/9a/d7/1c/the-devils-steak-burger.jpg");
 
-let item5 = new menuItem("fiifth burger", 50, false, false, "Nothing", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Bulka_mala_pszenna.jpg/380px-Bulka_mala_pszenna.jpg");
+let item5 = new menuItem("fifth burger", 50, false, false, "Nothing", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Bulka_mala_pszenna.jpg/380px-Bulka_mala_pszenna.jpg");
 
-console.log(printItem(item1));
-console.log(printItem(item2));
-console.log(printItem(item3));
-console.log(printItem(item4));
-console.log(printItem(item5));
+let el = document.getElementById('myID');
+
+let p1 = document.createElement("p");
+p1.appendChild(document.createTextNode(printItem(item1)));
+el.appendChild(p1);
+
+let p2 = document.createElement("p");
+p2.appendChild(document.createTextNode(printItem(item2)));
+el.appendChild(p2);
+
+let p3 = document.createElement("p");
+p3.appendChild(document.createTextNode(printItem(item3)));
+el.appendChild(p3);
+
+let p4 = document.createElement("p");
+p4.appendChild(document.createTextNode(printItem(item4)));
+el.appendChild(p4);
+
+let p5 = document.createElement("p");
+p5.appendChild(document.createTextNode(printItem(item5)));
+el.appendChild(p5);
