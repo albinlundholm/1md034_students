@@ -18,7 +18,16 @@
 	  <h2>Select a burger:</h2>
 	  <p>This is where you choose a burger.</p>
 	  <div class="wrapper" id="menu">
-	    
+	    <div v-for="burger in burgerMenu">
+	      <p>{{burger.name}}</p>
+	      <img :src=burger.imgPath class="burgerImage">
+	      <ul>
+		<li>Calories: {{burger.kcal}}</li>
+		<li>{{burger.ingredient}}</li>
+		<li class="allergen" v-if="burger.gluten">Contains gluten</li>
+		<li class="allergen" v-if="burger.lactose">Contains lactose</li>
+	      </ul>
+	    </div>
 	  </div>
 	  <!--
 	  <div class="wrapper">
