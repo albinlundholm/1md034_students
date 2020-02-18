@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>Burgers for Burghers</title>
-      <meta charset="utf-8"/>
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <script src="https://vuejs.org/js/vue.js"></script>
-      <script src="js/js_script.js" defer></script>
-      <script src="js/vue_script.js" defer></script>
-      <script type="text/javascript" src="js/menu.js"></script>
-    </head>
-    
-    <body>
-      <main>
-	
+  <head>
+    <title>Burgers for Burghers</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="js/js_script.js" defer></script>
+    <script src="js/vue_script.js" defer></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+  </head>
+  
+  <body>
+    <main>
+      <section id="main">
 	<section id="head">
-	<h1>Welcome to Burgers for Burghers!</h1>
-	<img src="https://images.unsplash.com/photo-1509807995916-c332365e2d9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1571&q=80">
+	  <h1>Welcome to Burgers for Burghers!</h1>
+	  <img src="https://images.unsplash.com/photo-1509807995916-c332365e2d9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1571&q=80">
 	</section>
 	<section id="selection">
 	  <h2>Select a burger:</h2>
@@ -30,6 +30,7 @@
 		<li class="allergen" v-if="burger.gluten">Contains gluten</li>
 		<li class="allergen" v-if="burger.lactose">Contains lactose</li>
 	      </ul>
+	      <input type="checkbox" :value="burger.name" v-model="pickedBurgers" >
 	    </div>
 	  </div>
 	</section>
@@ -41,24 +42,24 @@
 	  
 	  <p>
 	    <label for="fullname">Full name</label><br>
-	    <input type="text" id="fullname" name="fn" required="required" placeholder="First and last name"/>
+	    <input v-model="name" type="text" id="fullname" name="fn" required="required" placeholder="First and last name"/>
 	  </p>
 	  <p>
 	    <label for="email">E-mail</label><br>
-	    <input type="email" id="email" name="em" required="required" placeholder="E-mail address"/>
+	    <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address"/>
 	  </p>
 	  <p>
 	    <label for="street">Street</label><br>
-	    <input type="text" id ="street" name="sn" required="required" placeholder="Street name"/>
+	    <input v-model="street" type="text" id ="street" name="sn" required="required" placeholder="Street name"/>
 	  </p>
 	  <p>
 	    <label for="house">House</label><br>
-	    <input type="number" id ="house" name="hn" required="required" placeholder="House number"/>
+	    <input v-model="house" type="number" id ="house" name="hn" required="required" placeholder="House number"/>
 	  </p>
 
 	  <p>
 	    <label for="paymentmethod">Payment method</label><br>
-	    <select id="paymentmethod" name="pm">
+	    <select v-model="payment" id="paymentmethod" name="pm">
 	      <option>Credit/debit card</option>
 	      <option>Bank transfer</option>
 	      <option>Swish</option>
@@ -69,16 +70,27 @@
 	  <p>
 	    <label>Gender</label><br>
 	    <label for="male">Male</label>
-	    <input type="radio" id="male" name="gender" value="male" required="required" checked/>
+	    <input type="radio" id="male" name="gender" value="male" v-model="gender" required="required" checked/>
 	    <label for="female">Female</label>
-	    <input type="radio" id="female" name="gender" value="female" required="required"/>
+	    <input type="radio" id="female" name="gender" value="female" v-model="gender" required="required"/>
 	    <label for="other">Other</label>
-	    <input type="radio" id="other" name="gender" value="other" required="required"/>
+	    <input type="radio" id="other" name="gender" value="other" v-model="gender" required="required"/>
 	  </p>
- 
+	  
+	  <button v-on:click="sendInfo"  id="submitButton" type="submit"><img src="https://img.icons8.com/nolan/2x/checkmark.png"/>Send info</button> 
+	  <div v-if="infoSent">
+	    <p>Your order:</p>
+	    <p>Full name: {{name}}</p>
+	    <p>E-mail: {{email}}</p>
+	    <p>Street: {{street}}</p>
+	    <p>House: {{house}}</p>
+	    <p>Payment option: {{payment}}</p>
+	    <p>Gender: {{gender}}</p>
+	    <p>Picked burgers: {{pickedBurgers}}</p>
+	  </div>
 	</section>
-	<button type="submit"><img src="https://img.icons8.com/nolan/2x/checkmark.png"/>Send info</button>
-      </main>
-      <footer>
-    </body>
+      </section>
+    </main>
+    <footer>
+  </body>
 </html>
