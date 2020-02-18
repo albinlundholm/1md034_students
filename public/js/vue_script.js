@@ -11,8 +11,6 @@ const vm = new Vue({
 	infoSent: false, 
 	name: "", 
 	email: "",
-	//street: "",
-	//house: "",
 	payment: 'Credit/debit card',
 	gender: 'male', 
 	pickedBurgers: [], 
@@ -36,19 +34,15 @@ const vm = new Vue({
 	     * The click event object contains among other things different
 	     * coordinates that we need when calculating where in the map the click
 	     * actually happened. */
-	    /*let offset = {
-		x: event.currentTarget.getBoundingClientRect().left,
-		y: event.currentTarget.getBoundingClientRect().top,
-	    };*/
+	    
 	    socket.emit('addOrder', {
 		orderId: this.getNext(),
 		details: {
-		    /*x: this.order.x - 10 - offset.x,
-		    y: this.order.y - 10 - offset.y,*/
 		    x: this.order.details.x,
 		    y: this.order.details.y,
 		},
 		orderItems: this.pickedBurgers,
+		customerInfo: [this.name, this.email, this.payment, this.gender],
 	    });
 	},
 	displayOrder: function(event) {

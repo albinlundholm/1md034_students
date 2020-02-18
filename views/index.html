@@ -49,14 +49,6 @@
 	    <label for="email">E-mail</label><br>
 	    <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address"/>
 	  </p>
-	  <!--<p>
-	    <label for="street">Street</label><br>
-	    <input v-model="street" type="text" id ="street" name="sn" required="required" placeholder="Street name"/>
-	  </p>
-	  <p>
-	    <label for="house">House</label><br>
-	    <input v-model="house" type="number" id ="house" name="hn" required="required" placeholder="House number"/>
-	  </p>-->
 
 	  <p>
 	    <label for="paymentmethod">Payment method</label><br>
@@ -89,8 +81,8 @@
 	  
 	  <button v-on:click="addOrder" id="submitButton" type="submit"><img src="https://img.icons8.com/nolan/2x/checkmark.png"/>Send info</button>
 	  
-	  <div v-if="infoSent">
-	    <p>Your order:</p>
+	  <div>
+	    <h1>Your order:</h1>
 	    <p>Full name: {{name}}</p>
 	    <p>E-mail: {{email}}</p>
 	    <p>Payment option: {{payment}}</p>

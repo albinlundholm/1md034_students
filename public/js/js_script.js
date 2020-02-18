@@ -3,7 +3,7 @@ submitButton.onclick = function () {
     console.log("Button Clicked!");
     console.log(getInfo());
 }
-*/
+
 let getInfo = function () {
     
     let infoArray = [document.getElementById("fullname").value, document.getElementById("email").value, document.getElementById("street").value, document.getElementById("house").value, document.getElementById("paymentmethod").value, document.querySelector('input[name=gender]:checked').value];
@@ -11,7 +11,7 @@ let getInfo = function () {
     return infoArray;
 }
 
-/*
+
 let menu = document.getElementById("menu");
 
 for (var burger of burgerList) {
